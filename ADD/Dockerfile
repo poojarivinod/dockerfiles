@@ -5,6 +5,6 @@ RUN rm -rf /usr/share/nginx/html/index.html
 # ADD command will copy the application from internet, but COPY command cannot do it 
 ADD https://raw.githubusercontent.com/poojarivinod/dockerfiles/refs/heads/main/RUN/Dockerfile /usr/share/nginx/html/index.html
 # when we download application from internet, then we don't have permissions properly, so
-RUN chmod +x /usr/share/nginx/html/index.html
+RUN chmod +r /usr/share/nginx/html/index.html
 # nginx command to start in container --> docker community forums
 CMD  ["nginx", "-g", "daemon off;"]
