@@ -7,5 +7,6 @@ ENV course="devops with aws" \
 # here user1 is key, someuser is default value
 # we can overwrite this # docker build -t arg:1.0.0  --build-arg USERNAME=some-user . --> we need give like command to give run time variable
 ARG USERNAME=vinod
+ENV USERNAME=$USERNAME
 RUN echo "Hello user: ${USERNAME}, image version: ${version}" > /tmp/devops.txt
 CMD ["sleep", "100"]
